@@ -38,4 +38,4 @@ MovieList,movieDetail,Back,Footer,Home,Nav,Search
 modules used in the development are react,  react-dom, react-router-Dom,react-scripts and CDN Materialize css
 
 ### Folder structure
-<img src=“structure.png”>
+<img src=https://github.com/farhan500/scbReactWebAppChallenge/blob/master/structure.png>

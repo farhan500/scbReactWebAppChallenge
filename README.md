@@ -35,7 +35,7 @@ MovieList,movieDetail,Back,Footer,Home,Nav,Search
 
 
 ### Library used
-modules used in the development are react,  react-dom, react-router-Dom,react-scripts and CDN Materialize css
+modules used in the development are react,  react-dom, react-router-Dom,react-scripts,jest-dom,react-test-renderer and CDN Materialize css
 
 ### Folder structure
 <img src=https://github.com/farhan500/scbReactWebAppChallenge/blob/master/structure.png>

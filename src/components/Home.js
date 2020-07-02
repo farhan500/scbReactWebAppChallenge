@@ -3,6 +3,7 @@ import Nav from "./Nav";
 import Search from "./Search";
 import ScrollList from "./MovieList/ScrollList";
 import Footer from "./Footer";
+import Loading from "./Loading";
 
 class Home extends Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class Home extends Component {
       movieList: [],
       searchTerm: "",
       searchError: false,
+      loading:false,
     };
 
     this.apiKey = "b9bd48a6";
@@ -18,6 +20,7 @@ class Home extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    this.setState({ ...this.state, loading: true });
  
     fetch(
       `https://www.omdbapi.com/?apikey=${this.apiKey}&s=${this.state.searchTerm}&type=movie`
@@ -25,9 +28,9 @@ class Home extends Component {
       .then((data) => data.json())
       .then((data) => {
         if (data.Search) {
-          this.setState({ movieList: [...data.Search], searchError: false });
+          this.setState({ movieList: [...data.Search], searchError: false, loading: false });
         } else {
-          this.setState({ searchError: true });
+          this.setState({ searchError: true,loading: false });
         }
       });
   };
@@ -46,10 +49,14 @@ class Home extends Component {
   }
 
   render() {
-    //console.log(this.state.movieList);
+
+    if (this.state.loading === true) {
+      return ( <Loading search={"Search Movies"}></Loading>)
+    }
+
     return (
       <div className="Home" onScroll={() => this.handleScroll()}>
-        <Nav text={"Search movies"}></Nav>
+        <Nav text={"Search Movies"}></Nav>
         <Search
           handleSubmit={this.handleSubmit}
           handleChange={this.handleChange}

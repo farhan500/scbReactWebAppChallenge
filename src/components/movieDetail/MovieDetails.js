@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-
+import Loading from "../Loading";
 import Nav from "../Nav";
 import Footer from "../Footer";
 import BackButton from "../Back";
+
+
 
 class MovieDetails extends Component {
   constructor(props) {
@@ -39,22 +41,11 @@ class MovieDetails extends Component {
   }
 
   render() {
+
+
+ 
     if (this.state.loading === true) {
-      return (
-        <div className="Home ">
-          <Nav text={" Movie Details"}></Nav>
-          <div className="autoHeight movDet">
-            <div className="row">
-              <div className="col s12">
-                {" "}
-                <h2>
-                  <i>loading...</i>
-                </h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
+      return ( <Loading search={" Movie Details "}></Loading>)
     }
     if (this.state.searchError === false)
       return (
@@ -71,14 +62,12 @@ class MovieDetails extends Component {
             <div className="col s12">
               <div className="card-panel hoverable medium ">
                 <img
-                  className="card-img z-depth-1"
+                  className="card-img z-depth-1 responsive-img"
                   alt="movie details"
                   src={this.state.MovieDetails.Poster}
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src =
-                      "https://treefurniturerental.ca/wp-content/uploads/2017/05/sorry-image-not-available.jpg";
-                  }}
+                    e.target.src="https://www.freeiconspng.com/uploads/no-image-icon-11.PNG";                  }}
                 />
 
                 <div>

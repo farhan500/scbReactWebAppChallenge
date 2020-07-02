@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="App">TEST
+        <div className="App">
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/MovieDetails/:value" component={MovieDetails} />

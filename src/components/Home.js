@@ -18,9 +18,9 @@ class Home extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-
+ 
     fetch(
-      `http://www.omdbapi.com/?apikey=${this.apiKey}&s=${this.state.searchTerm}&type=movie`
+      `https://www.omdbapi.com/?apikey=${this.apiKey}&s=${this.state.searchTerm}&type=movie`
     )
       .then((data) => data.json())
       .then((data) => {

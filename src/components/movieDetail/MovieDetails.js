@@ -20,7 +20,7 @@ class MovieDetails extends Component {
     this.setState({ ...this.state, loading: true });
     this.apiKey = "b9bd48a6";
 
-    const MdUrl = `http://www.omdbapi.com/?apikey=${this.apiKey}&i=${this.props.match.params.value}`;
+    const MdUrl = `https://www.omdbapi.com/?apikey=${this.apiKey}&i=${this.props.match.params.value}`;
 
     fetch(MdUrl)
       .then((data) => data.json())

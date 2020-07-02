@@ -13,7 +13,7 @@ const Search = (props) => {
                 id="Search"
                 type="text"
                 value={props.searchTerm}
-                className="validate"
+                className="validate" autoFocus
               />
             </div>
           </form>

@@ -97,7 +97,7 @@ class MovieDetails extends Component {
                     <b>
                       <i>Director : </i>{" "}
                     </b>
-                    {this.state.MovieDetails.Plot}
+                    {this.state.MovieDetails.Director}
                   </p>
                   <hr></hr>
                   <p>

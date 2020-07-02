@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders Test text', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/MovieDetails/i);
+  const linkElement = getByText(/test/i);
   expect(linkElement).toBeInTheDocument();
 });
